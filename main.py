@@ -1,8 +1,8 @@
 import math
 import random
 
-import cv2
 import numpy as np
+import cv2
 
 img = np.zeros((2340, 1080, 1), np.uint8)
 img[:, :] = 255
@@ -27,15 +27,17 @@ def draw_angled_rec(x0, y0, width, height, angle, img, color, line_w):
     return img
 
 
-lado_q = int(img.shape[1] / 12)
+lado_q = img.shape[1] / 13
 
-embaralhador = 0
-for y in range(0, img.shape[0], int(lado_q)):
-    for x in range(0, img.shape[1], int(lado_q)):
-        img = draw_angled_rec(x + lado_q // 2, y + lado_q // 2,
+emb = 0
+for y in range(int(lado_q//2), img.shape[0]-int(lado_q), int(lado_q)):
+    for x in range(int(lado_q//2), img.shape[1]-int(lado_q), int(lado_q)):
+        img = draw_angled_rec(random.randint((x + lado_q // 2) - emb, (x + lado_q // 2) + emb),
+                              random.randint((y + lado_q // 2) -
+                                             emb, (y + lado_q // 2) + emb),
                               lado_q, lado_q,
-                              random.uniform(float(f"-{embaralhador}"), embaralhador),
+                              random.uniform(float(f"-{emb}"), emb),
                               img, 0, 4)
-    embaralhador += 2
+    emb += random.randint(0, 3)
 
 cv2.imwrite("Lindomar Rodrigues, Schotter.png", img)
