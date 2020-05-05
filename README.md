@@ -9,7 +9,7 @@ This is the work of Georg Nees, from 1968, Schotter (Gravel), one of the first a
 Schotter starts with a standard line of 12 squares and gradually increases the magnitude of randomness in the rotation and location of the squares as you move down the lines.
 
 ## My art
-![Schotter, Lindomar Rodrigues](https://github.com/LindomarRodrigues/Georg-Nees-Schotter-Python/blob/master/Lindomar%20Rodrigues%2C%20Schotter.png)
+![Schotter, Lindomar Rodrigues](https://github.com/LindomarRodrigues/Georg-Nees-Schotter-Python/blob/master/Lindomar%20Rodrigues%2C%20Schotter.png) <!-- .element height="50%" width="50%" -->
 
 ## License
 [GPL 3.0](https://choosealicense.com/licenses/gpl-3.0/)
